@@ -1,0 +1,60 @@
+
+.chart {
+    -fx-legend-visible: false;
+    -fx-title-side: top;
+}
+
+.chart-title {
+    -fx-text-fill: dimgray;
+}
+
+.axis {
+    -fx-tick-label-fill: darkorchid;
+}
+
+.axis-label {
+    -fx-text-fill: lightseagreen;
+}
+
+.chart-content {
+
+}
+
+
+.status-one {
+    -fx-background-color: yellowgreen;
+}
+.status-two {
+    -fx-background-color: gold;
+}
+.status-three {
+    -fx-background-color: darkturquoise;
+}
+.status-four {
+    -fx-background-color: hotpink;
+}
+.status-five {
+    -fx-background-color: orange;
+}
+.status-six {
+    -fx-background-color: deepskyblue;
+}
+.status-seven {
+    -fx-background-color: violet;
+}
+.status-eight {
+    -fx-background-color: tomato;
+}
+.status-nine {
+    -fx-background-color: blueviolet;
+}
+.status-ten {
+    -fx-background-color: mediumspringgreen;
+}
+.status-eleven {
+    -fx-background-color: crimson;
+}
+.status-twelve {
+    -fx-background-color: skyblue;
+}
+
