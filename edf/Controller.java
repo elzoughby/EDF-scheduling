@@ -85,8 +85,8 @@ public class Controller {
     private TimelineChart drawChart(List<Task> scheduledTaskList) {
 
         List<String> nameList = new ArrayList<>();
-        for(Task t : taskList)
-            nameList.add(t.getName());
+        for(int i = taskList.size() - 1; i >= 0; i--)
+            nameList.add(taskList.get(i).getName());
 
         NumberAxis xAxis = new NumberAxis();
         xAxis.setAutoRanging(false);

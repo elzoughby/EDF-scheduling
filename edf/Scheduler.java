@@ -15,21 +15,21 @@ class Scheduler {
         Map<Integer, List<Task>> waitingMap = new HashMap<>();
 
 
-        for(int timeUnit = -1; timeUnit < lcm; timeUnit++) {
+        for(int timeUnit = 0; timeUnit < lcm; timeUnit++) {
 
-            out.getDeadlinesList().add(timeUnit + 1, new ArrayList<>());
+            out.getDeadlinesList().add(timeUnit, new ArrayList<>());
 
             //add iterative tasks into the waiting list
             for(Task t : taskList)
-                if(timeUnit + 1 < lcm && (timeUnit + 1) % t.getPeriod() == 0) {
+                if(timeUnit % t.getPeriod() == 0) {
 
-                    if(! waitingMap.containsKey(timeUnit + 1 + t.getPeriod()))
-                        waitingMap.put(timeUnit + 1 + t.getPeriod(), new ArrayList<>());
+                    if(! waitingMap.containsKey(timeUnit + t.getPeriod()))
+                        waitingMap.put(timeUnit + t.getPeriod(), new ArrayList<>());
 
                     for(int i = 0; i < t.getET(); i++)
-                        waitingMap.get(timeUnit + 1 + t.getPeriod()).add(t);
+                        waitingMap.get(timeUnit + t.getPeriod()).add(t);
 
-                    out.getDeadlinesList().get(timeUnit + 1).add(t);
+                    out.getDeadlinesList().get(timeUnit).add(t);
                 }
 
             if(! waitingMap.isEmpty()) {
@@ -45,7 +45,7 @@ class Scheduler {
         }
 
         out.getDeadlinesList().remove(0);
-        out.getTaskList().remove(out.getTaskList().size() - 1);
+        out.getDeadlinesList().add(new ArrayList<>());
         return out;
     }
 

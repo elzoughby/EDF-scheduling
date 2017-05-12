@@ -179,5 +179,4 @@ public class TimelineChart extends XYChart<Number, String> {
         }
     }
 
-
 }
