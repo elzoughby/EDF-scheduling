@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Task implements Comparable<Task> {
 
-    private static int count = 1;
+    private static int count = 0;
     private final SimpleIntegerProperty eT;
     private final SimpleIntegerProperty period;
     private final SimpleIntegerProperty id;
